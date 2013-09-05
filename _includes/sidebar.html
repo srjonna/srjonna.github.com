@@ -1,0 +1,9 @@
+<h3>About Me</h3>
+
+<p>Developer experimenting building my first blog with Jekyll.</p>
+
+<ul>
+  {% for post in site.posts limit: 5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
