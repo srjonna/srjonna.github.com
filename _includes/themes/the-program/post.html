@@ -11,16 +11,19 @@
 
 			<div class="bd">
 				<div class="entry-content">
-					{{ content }}
 					<div class="meta">
 						<p class="date-publish">
-							Published: 
+							Published on: 
 							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
 							<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
 							<span class="day">{{ page.date | date: '%d' }}</span>
 							<span class="year">{{ page.date | date: '%Y' }}</span>
-							</date>
+							</date>{% if page.author %}, by {{ page.author }} {% endif %}
 						</p>
+
+					</div>
+					{{ content }}
+					<div class="meta">
 						<ul class="list-category list-linear">
 							<li class="list-head">category: </li>
 							{% assign categories_list = page.categories %}

@@ -57,7 +57,7 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+  userconfigfile = YAML.load(open('_user.yml'))
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -66,6 +66,7 @@ task :post do
     post.puts 'description: ""'
     post.puts "category: "
     post.puts "tags: #{tags}"
+	post.puts "author: \"#{userconfigfile[:author]}\""
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
