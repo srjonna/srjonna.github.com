@@ -44,6 +44,15 @@ a:hover {
   text-decoration: none;
 }
 
+a.post-title {
+  color: #999999
+}
+
+a.post-title:hover {
+  color: #d4edf9;
+  text-decoration: none;
+}
+
 /* line 44, ../_sass/_base.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
