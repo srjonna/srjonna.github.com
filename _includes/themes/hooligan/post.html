@@ -31,8 +31,7 @@
   <div class="span4">
     <section>
       <h4>Published </h4>
-      {% assign post_author = page.author%}
-      {% assign post_date = page.date%}
+      {% assign info_post = page%}
       {% include custom/post_info %}
     </section>
     {% if page.category %}
