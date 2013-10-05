@@ -30,9 +30,10 @@
   
   <div class="span4">
     <section>
-      <h4>Published</h4>
-      <div class="date"><span>{{ page.date | date_to_long_string }}</span>{% include custom/post_by %}
-	  </div>
+      <h4>Published </h4>
+      {% assign post_author = page.author%}
+      {% assign post_date = page.date%}
+      {% include custom/post_info %}
     </section>
     {% if page.category %}
       <section>
