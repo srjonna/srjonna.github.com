@@ -1,4 +1,4 @@
-<span>on {{ post_date | date_to_long_string }}{% if post_author %}, by {{ post_author}} {% endif %} </span>
+<span>on {{ post_date | date_to_long_string }}{% if post_author != null %}, by {{ post_author}} {% endif %} </span>
 {% assign post_author = nil%}
 {% assign post_date = nil%}
 
