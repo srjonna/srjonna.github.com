@@ -1,6 +1,12 @@
 body {
   padding-top: 50px;
 }
+.bt-component {
+  margin: 5px;
+}
+.post-info {
+  color: #0309ad;
+}
 .social {
   list-style: none;
 }
