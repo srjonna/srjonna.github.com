@@ -5,7 +5,7 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
     
-<ul class="posts unstyled">
+<ul class="posts list-unstyled">
   {% for post in site.posts %}
     <li>
       <h2><a class="post-title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
